@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <title>โหลดรูปภาพ</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       height: 100vh;
@@ -11,6 +15,8 @@
       justify-content: center;
       align-items: center;
       background: #000;
+      transition: opacity 1s ease;
+      opacity: 1;
     }
 
     img {
@@ -28,15 +34,23 @@
         transform: scale(1);
       }
     }
+
+    .fade-out {
+      opacity: 0;
+    }
   </style>
-  <script>
-    // เปลี่ยนหน้าอัตโนมัติหลัง 3 วินาที
-    setTimeout(() => {
-      window.location.href = "main.html";
-    }, 3000);
-  </script>
 </head>
 <body>
   <img src="20_20250505124815.png" alt="โหลดรูป">
+  
+  <script>
+    // เริ่มเฟดออกหลัง 3 วิ แล้วค่อยเปลี่ยนหน้า
+    setTimeout(() => {
+      document.body.classList.add("fade-out");
+      setTimeout(() => {
+        window.location.href = "main.html";
+      }, 1000); // รอให้เฟดออกเสร็จก่อน (1 วิ)
+    }, 3000);
+  </script>
 </body>
 </html>
