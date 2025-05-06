@@ -2,7 +2,7 @@
 <html lang="th">
 <head>
   <meta charset="UTF-8">
-  <title>หน้าเว็บพร้อมภาพและแอนิเมชัน</title>
+  <title>โหลดรูปภาพ</title>
   <style>
     body {
       margin: 0;
@@ -10,7 +10,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      background: #111;
+      background: #000;
     }
 
     img {
@@ -19,7 +19,7 @@
       transform: scale(0.9);
       animation: fadeIn 2s ease-out forwards;
       border-radius: 15px;
-      box-shadow: 0 0 25px rgba(255, 255, 255, 0.15);
+      box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
     }
 
     @keyframes fadeIn {
@@ -29,8 +29,14 @@
       }
     }
   </style>
+  <script>
+    // เปลี่ยนหน้าอัตโนมัติหลัง 3 วินาที
+    setTimeout(() => {
+      window.location.href = "main.html";
+    }, 3000);
+  </script>
 </head>
 <body>
-  <img src="20_20250505124815.png" alt="ภาพกลางหน้าเว็บ">
+  <img src="20_20250505124815.png" alt="โหลดรูป">
 </body>
 </html>
